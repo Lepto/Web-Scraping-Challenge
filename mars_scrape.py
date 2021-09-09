@@ -45,7 +45,7 @@ def scrape_info():
     time.sleep(1)
 
     # Converting DataFrame into HTML table string
-    MarsFacts_html = MarsFacts_df.to_html(classes = ["table", "table-striped", "text-left"])
+    MarsFacts_html = MarsFacts_df.to_html(classes = ["table", "table-striped"], index =False, justify = "left")
     MarsFacts = MarsFacts_html.replace('\n','')
 
     # Visit marshemispheres.com to scrape for hi-def images of Mars' hemispheres
